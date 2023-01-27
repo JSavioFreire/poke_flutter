@@ -7,7 +7,7 @@ class LoadingPokemon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 30),
+      padding: const EdgeInsets.only(top: 170),
       child: Center(
         child: Lottie.network(
             'https://assets9.lottiefiles.com/packages/lf20_iwmd6pyr.json',

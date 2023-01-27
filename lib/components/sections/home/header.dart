@@ -11,6 +11,7 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
+          color: Colors.white,
           border: Border(
               bottom: BorderSide(width: 2, color: ThemeColors.greyLight))),
       child: Row(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:poke_flutter/components/sections/header/header.dart';
-import 'package:poke_flutter/components/sections/pokemons/pokemons.dart';
+import 'package:poke_flutter/components/sections/home/header.dart';
+import 'package:poke_flutter/components/sections/home/pokemons.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

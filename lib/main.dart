@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:poke_flutter/controller/color_box_provider.dart';
 import 'package:poke_flutter/screens/home/home_screen.dart';
+import 'package:poke_flutter/screens/pokemon/pokemon_screen.dart';
 import 'package:poke_flutter/theme/theme.dart';
 import 'package:provider/provider.dart';
 
@@ -22,7 +23,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: myTheme,
       initialRoute: '/',
-      routes: {'/': (context) => const HomeScreen()},
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/pokemon': (context) => const PokemonScreen()
+      },
     );
   }
 }

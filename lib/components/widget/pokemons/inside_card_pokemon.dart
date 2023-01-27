@@ -14,7 +14,6 @@ class InsideCardPokemon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     EachProvider controllerEachProvider = EachProvider();
-
     controllerEachProvider.callApiPok(url);
     return AnimatedBuilder(
         animation: Listenable.merge([
@@ -25,9 +24,8 @@ class InsideCardPokemon extends StatelessWidget {
           return controllerEachProvider.loadingComplete.value
               ? const LoadingCard()
               : CardPokemon(
-                  type: controllerEachProvider
-                      .eachComplete.value['types'][0]['type']['name']
-                      .toString(),
+                pokemon: controllerEachProvider.eachComplete.value ,
+               
                   inside: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

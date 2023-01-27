@@ -7,7 +7,7 @@ class InitialApiProvider {
   ValueNotifier each = ValueNotifier([]);
   ValueNotifier loading = ValueNotifier(true);
 
-  String url = 'https://pokeapi.co/api/v2/pokemon?limit=30&offset=0';
+  String url = 'https://pokeapi.co/api/v2/pokemon?limit=1008&offset=0';
 
   callApi() async {
     var client = http.Client();

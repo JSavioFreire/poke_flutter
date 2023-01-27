@@ -4,14 +4,13 @@ class ThemeColors {
   static const Color myGrey = Color.fromRGBO(82, 82, 82, 1);
   static const Color greyLight = Color.fromRGBO(210, 210, 210, 1);
   static const Color greyLight7 = Color.fromRGBO(210, 210, 210, 0.7);
-
   static const Color greyLight5 = Color.fromRGBO(230, 230, 230, 0.5);
 
   static const Map typeColors = {
-    'grass': Color.fromRGBO(117, 203, 116, 1),
-    'fire': Color.fromRGBO(192, 61, 43, 1),
-    'water': Color.fromRGBO(73, 208, 176, 1),
-    'electric': Color.fromRGBO(209, 203, 73, 1),
+    'grass': Color.fromRGBO(73, 208, 176, 1),
+    'fire': Color.fromRGBO(252, 108, 109, 1),
+    'water': Color.fromRGBO(118, 190, 254, 1),
+    'electric': Color.fromRGBO(255, 215, 111, 1),
     'bug': Color.fromRGBO(123, 209, 128, 1),
     'normal': Color.fromRGBO(209, 183, 137, 1),
     'poison': Color.fromRGBO(137, 94, 209, 1),
