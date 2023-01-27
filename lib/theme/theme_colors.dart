@@ -8,8 +8,8 @@ class ThemeColors {
   static const Color greyLight5 = Color.fromRGBO(230, 230, 230, 0.5);
 
   static const Map typeColors = {
-    'grass': Color.fromRGBO(78, 209, 75, 1),
-    'fire': Color.fromRGBO(209, 91, 52, 1),
+    'grass': Color.fromRGBO(117, 203, 116, 1),
+    'fire': Color.fromRGBO(192, 61, 43, 1),
     'water': Color.fromRGBO(73, 208, 176, 1),
     'electric': Color.fromRGBO(209, 203, 73, 1),
     'bug': Color.fromRGBO(123, 209, 128, 1),

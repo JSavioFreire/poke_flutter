@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:poke_flutter/api/fetch_each.dart';
 import 'package:poke_flutter/components/widget/pokemons/card_pokemon.dart';
 import 'package:poke_flutter/components/widget/pokemons/image.dart';
+import 'package:poke_flutter/components/widget/pokemons/loading_card.dart';
 import 'package:poke_flutter/components/widget/pokemons/type.dart';
 
 class InsideCardPokemon extends StatelessWidget {
@@ -22,8 +23,7 @@ class InsideCardPokemon extends StatelessWidget {
         ]),
         builder: (context, child) {
           return controllerEachProvider.loadingComplete.value
-              ? Lottie.network(
-                  'https://assets9.lottiefiles.com/private_files/lf30_mx5w1q03.json')
+              ? const LoadingCard()
               : CardPokemon(
                   type: controllerEachProvider
                       .eachComplete.value['types'][0]['type']['name']

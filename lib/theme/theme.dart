@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:poke_flutter/theme/theme_colors.dart';
 
 ThemeData myTheme = ThemeData(
+  fontFamily: GoogleFonts.nunitoSans().fontFamily,
   iconTheme: const IconThemeData(color: ThemeColors.myGrey, size: 35),
   textTheme: const TextTheme(
       titleLarge: TextStyle(
