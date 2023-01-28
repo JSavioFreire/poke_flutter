@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:poke_flutter/components/sections/pokemon_screen/background.dart';
-import 'package:poke_flutter/controller/color_box_provider.dart';
-import 'package:provider/provider.dart';
 
 class PokemonScreen extends StatelessWidget {
   const PokemonScreen({super.key});

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:poke_flutter/api/fetch_each.dart';
 import 'package:poke_flutter/components/widget/pokemons/card_pokemon.dart';
 import 'package:poke_flutter/components/widget/pokemons/image.dart';
@@ -24,8 +23,7 @@ class InsideCardPokemon extends StatelessWidget {
           return controllerEachProvider.loadingComplete.value
               ? const LoadingCard()
               : CardPokemon(
-                pokemon: controllerEachProvider.eachComplete.value ,
-               
+                  pokemon: controllerEachProvider.eachComplete.value,
                   inside: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poke_flutter/components/widget/backgroundPokemonScreen/id_pokemon_screen.dart';
 import 'package:poke_flutter/components/widget/backgroundPokemonScreen/types.dart';
 
 class NameNumberAndtypes extends StatelessWidget {
@@ -21,14 +22,17 @@ class NameNumberAndtypes extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                name[0].toUpperCase() + name.substring(1).toLowerCase(),
-                style: TextStyle(fontSize: 40),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: Text(
+                  name[0].toUpperCase() + name.substring(1).toLowerCase(),
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
               ),
               TypesPokemonsScreen(type: types)
             ],
           ),
-          Text(number)
+          IdPokemonScreen(id: number)
         ],
       ),
     );

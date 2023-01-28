@@ -16,7 +16,7 @@ class BackgroundPokemon extends StatelessWidget {
           color:
               value.boxColor(pokemonApi['types'][0]['type']['name'].toString()),
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(8, 30, 8, 0),
+            padding: const EdgeInsets.fromLTRB(8, 50, 8, 0),
             child: Column(
               children: [
                 const IconsPokemonScreen(),
@@ -24,6 +24,10 @@ class BackgroundPokemon extends StatelessWidget {
                     name: pokemonApi['name'],
                     number: pokemonApi['id'].toString(),
                     types: pokemonApi['types']),
+                Image.asset(
+                  'assets/pokeball.png',
+                  opacity: const AlwaysStoppedAnimation(.2),
+                )
               ],
             ),
           ),

@@ -11,10 +11,14 @@ ThemeData myTheme = ThemeData(
         fontWeight: FontWeight.bold,
         color: ThemeColors.myGrey,
       ),
+      bodyMedium: TextStyle(
+          fontSize: 40, color: Colors.white, fontWeight: FontWeight.w800),
       bodyLarge: TextStyle(fontSize: 18, color: Colors.white),
       bodySmall: TextStyle(fontSize: 13, color: Colors.white),
       titleSmall: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w900,
-          color: ThemeColors.greyLight7)),
+          color: ThemeColors.greyLight7),
+      displayLarge: TextStyle(
+          fontSize: 18, fontWeight: FontWeight.w900, color: Colors.white)),
 );
