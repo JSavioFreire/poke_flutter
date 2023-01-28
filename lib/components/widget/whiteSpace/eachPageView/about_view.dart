@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:poke_flutter/api/fetch_more_about.dart';
 import 'package:poke_flutter/components/widget/whiteSpace/componentsPageView/each_row_view.dart';
 import 'package:poke_flutter/theme/theme_colors.dart';
 
@@ -19,24 +18,8 @@ class AboutView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MoreAboutProvider controller = MoreAboutProvider();
-    controller.callApiPok(urlApi);
-
     return Column(
       children: [
-        EachRow(
-            name: 'Species',
-            value: AnimatedBuilder(
-                animation: Listenable.merge([controller.moreAboutComplete]),
-                builder: (context, child) {
-                  return controller.loadingComplete.value
-                      ? const Text('')
-                      : Text(
-                          controller.moreAboutComplete.value['genera'][7]
-                              ['genus'],
-                          style: const TextStyle(color: ThemeColors.myGrey),
-                        );
-                })),
         EachRow(
             name: 'Height',
             value: Text(
