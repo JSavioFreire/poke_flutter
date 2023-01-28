@@ -26,7 +26,10 @@ class NameNumberAndtypes extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text(
                   name[0].toUpperCase() + name.substring(1).toLowerCase(),
-                  style: Theme.of(context).textTheme.bodyMedium,
+                  style: const TextStyle(
+                      fontSize: 40,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w800),
                 ),
               ),
               TypesPokemonsScreen(type: types)

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class ThemeColors {
   static const Color myGrey = Color.fromRGBO(82, 82, 82, 1);
   static const Color greyLight = Color.fromRGBO(210, 210, 210, 1);
+  static const Color greyMedium = Color.fromRGBO(170, 170, 170, 1);
   static const Color greyLight7 = Color.fromRGBO(210, 210, 210, 0.7);
   static const Color greyLight5 = Color.fromRGBO(230, 230, 230, 0.5);
 
