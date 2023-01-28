@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:poke_flutter/components/widget/whiteSpace/page_view.dart';
 import 'package:poke_flutter/components/widget/whiteSpace/title_page_view.dart';
 
 class WhiteSpace extends StatefulWidget {
-  const WhiteSpace({super.key});
+  final Map api;
+  const WhiteSpace({super.key, required this.api});
 
   @override
   State<WhiteSpace> createState() => _WhiteSpaceState();
@@ -18,7 +20,17 @@ class _WhiteSpaceState extends State<WhiteSpace> {
     );
 
     void changePageButton(e) {
-      controllerPageView.jumpToPage(e);
+      controllerPageView.animateToPage(
+        e,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.linearToEaseOut,
+      );
+    }
+
+    void newSetState(value) {
+      setState(() {
+        currentPage = value;
+      });
     }
 
     return Column(
@@ -29,32 +41,18 @@ class _WhiteSpaceState extends State<WhiteSpace> {
               color: Colors.white,
               borderRadius: BorderRadius.vertical(top: Radius.circular(35))),
           height: MediaQuery.of(context).size.height * 0.5,
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(30, 60, 30, 0),
-            child: Column(
-              children: [
-                TitlePageView(
-                  currentPage: currentPage,
-                  changePageButton: changePageButton,
-                ),
-                Expanded(
-                  child: PageView(
-                    controller: controllerPageView,
-                    onPageChanged: (value) => {
-                      setState(() {
-                        currentPage = value;
-                      })
-                    },
-                    children: [
-                      Text('page1'),
-                      Text('page 2'),
-                      Text('page3'),
-                      Text('page4'),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+          child: Column(
+            children: [
+              TitlePageView(
+                currentPage: currentPage,
+                changePageButton: changePageButton,
+              ),
+              PageViewWhiteSpace(
+                setstate: newSetState,
+                controllerPageView: controllerPageView,
+                api: widget.api,
+              )
+            ],
           ),
         ),
       ],

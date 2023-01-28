@@ -15,7 +15,7 @@ class PokemonScreen extends StatelessWidget {
         body: Stack(
       children: [
         BackgroundPokemon(pokemonApi: arguments),
-        const WhiteSpace(),
+        WhiteSpace(api: arguments),
         ImageCenter(
           image: arguments['sprites']['other']['official-artwork']
               ['front_default'],
