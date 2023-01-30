@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poke_flutter/hooks/to_capitalize.dart';
 import 'package:poke_flutter/theme/theme_colors.dart';
 
 class TypesPokemonsScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class TypesPokemonsScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10)),
               padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 2),
               child: Text(
-                type[0]['type']['name'],
+                Capitalize().toCapitalize(type[0]['type']['name']),
                 style: Theme.of(context).textTheme.bodyLarge,
               ),
             ),
@@ -33,7 +34,7 @@ class TypesPokemonsScreen extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 25, vertical: 2),
                   child: Text(
-                    type[0]['type']['name'],
+                    Capitalize().toCapitalize(type[0]['type']['name']),
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ),
@@ -45,7 +46,7 @@ class TypesPokemonsScreen extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 25, vertical: 2),
                 child: Text(
-                  type[1]['type']['name'],
+                  Capitalize().toCapitalize(type[1]['type']['name']),
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ),

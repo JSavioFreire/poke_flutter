@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:poke_flutter/components/widget/whiteSpace/componentsPageView/each_row_view.dart';
+import 'package:poke_flutter/hooks/to_capitalize.dart';
 import 'package:poke_flutter/theme/theme_colors.dart';
 
 class AboutView extends StatelessWidget {
@@ -43,7 +44,7 @@ class AboutView extends StatelessWidget {
             value: Flexible(
                 child: abilities.length > 1
                     ? Text(
-                        '${abilities[0]['ability']['name']}, ${abilities[1]['ability']['name']}.',
+                        '${Capitalize().toCapitalize(abilities[0]['ability']['name'])}, ${Capitalize().toCapitalize(abilities[1]['ability']['name'])}.',
                         style: const TextStyle(
                           color: ThemeColors.myGrey,
                         ),

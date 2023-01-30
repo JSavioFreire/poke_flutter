@@ -4,6 +4,7 @@ import 'package:poke_flutter/components/widget/pokemons/card_pokemon.dart';
 import 'package:poke_flutter/components/widget/pokemons/image.dart';
 import 'package:poke_flutter/components/widget/pokemons/loading_card.dart';
 import 'package:poke_flutter/components/widget/pokemons/type.dart';
+import 'package:poke_flutter/hooks/to_capitalize.dart';
 
 class InsideCardPokemon extends StatelessWidget {
   final String name;
@@ -39,8 +40,7 @@ class InsideCardPokemon extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    name[0].toUpperCase() +
-                                        name.substring(1).toLowerCase(),
+                                    Capitalize().toCapitalize(name),
                                     style:
                                         Theme.of(context).textTheme.bodyLarge,
                                   ),

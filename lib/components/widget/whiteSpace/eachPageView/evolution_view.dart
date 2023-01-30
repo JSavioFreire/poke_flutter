@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:poke_flutter/api/fetch_evolutions.dart';
+import 'package:poke_flutter/hooks/to_capitalize.dart';
 
 class EvolutionView extends StatelessWidget {
   final String urlEvolution;
@@ -19,12 +20,13 @@ class EvolutionView extends StatelessWidget {
                 builder: ((context, child) {
                   return Column(
                     children: [
-                      Text(controller.evolution.value['chain']['species']
-                          ['name']),
-                      Text(controller.evolution.value['chain']['evolves_to'][0]
-                          ['species']['name']),
-                      Text(controller.evolution.value['chain']['evolves_to'][0]
-                          ['evolves_to'][0]['species']['name']),
+                      Text(Capitalize().toCapitalize(controller
+                          .evolution.value['chain']['species']['name'])),
+                      Text(Capitalize().toCapitalize(controller.evolution
+                          .value['chain']['evolves_to'][0]['species']['name'])),
+                      Text(Capitalize().toCapitalize(
+                          controller.evolution.value['chain']['evolves_to'][0]
+                              ['evolves_to'][0]['species']['name'])),
                     ],
                   );
                 }))));

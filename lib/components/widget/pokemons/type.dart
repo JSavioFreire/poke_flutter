@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poke_flutter/hooks/to_capitalize.dart';
 import 'package:poke_flutter/theme/theme_colors.dart';
 
 class TypesPokemons extends StatelessWidget {
@@ -14,7 +15,7 @@ class TypesPokemons extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10)),
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
             child: Text(
-              type[0]['type']['name'],
+              Capitalize().toCapitalize(type[0]['type']['name']),
               style: Theme.of(context).textTheme.bodySmall,
             ),
           )
@@ -28,7 +29,7 @@ class TypesPokemons extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
                 child: Text(
-                  type[0]['type']['name'],
+                  Capitalize().toCapitalize(type[0]['type']['name']),
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
@@ -41,7 +42,7 @@ class TypesPokemons extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
                   child: Text(
-                    type[1]['type']['name'],
+                    Capitalize().toCapitalize(type[1]['type']['name']),
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
                 ),

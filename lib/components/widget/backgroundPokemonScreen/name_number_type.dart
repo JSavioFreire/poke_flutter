@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:poke_flutter/components/widget/backgroundPokemonScreen/id_pokemon_screen.dart';
 import 'package:poke_flutter/components/widget/backgroundPokemonScreen/types.dart';
+import 'package:poke_flutter/hooks/to_capitalize.dart';
 
 class NameNumberAndtypes extends StatelessWidget {
   final String name;
@@ -25,7 +26,7 @@ class NameNumberAndtypes extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text(
-                  name[0].toUpperCase() + name.substring(1).toLowerCase(),
+                  Capitalize().toCapitalize(name),
                   style: const TextStyle(
                       fontSize: 40,
                       color: Colors.white,
