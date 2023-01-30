@@ -5,7 +5,6 @@ import 'package:poke_flutter/theme/theme_colors.dart';
 class AboutView extends StatelessWidget {
   final String weight;
   final String height;
-  final String urlApi;
   final String baseExp;
   final List abilities;
   const AboutView(
@@ -13,7 +12,6 @@ class AboutView extends StatelessWidget {
       required this.baseExp,
       required this.weight,
       required this.height,
-      required this.urlApi,
       required this.abilities});
 
   @override

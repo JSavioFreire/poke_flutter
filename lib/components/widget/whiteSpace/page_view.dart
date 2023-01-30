@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poke_flutter/components/widget/whiteSpace/componentsPageView/calling_api_to_evolution.dart';
 import 'package:poke_flutter/components/widget/whiteSpace/eachPageView/about_view.dart';
 import 'package:poke_flutter/components/widget/whiteSpace/eachPageView/base_stats.dart';
 
@@ -22,7 +23,6 @@ class PageViewWhiteSpace extends StatelessWidget {
           AboutView(
             weight: api['weight'].toString(),
             height: api['height'].toString(),
-            urlApi: api['species']['url'],
             baseExp: api['base_experience'].toString(),
             abilities: api['abilities'],
           ),
@@ -33,7 +33,7 @@ class PageViewWhiteSpace extends StatelessWidget {
               sAtk: api['stats'][3]['base_stat'],
               sDef: api['stats'][4]['base_stat'],
               speed: api['stats'][5]['base_stat']),
-          Text('page3'),
+          CallingApiToEvolution(api: api),
           Text('page4'),
         ],
       ),
