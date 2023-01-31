@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poke_flutter/hooks/to_pokemon_id.dart';
 
 class IdPokemonScreen extends StatelessWidget {
   final String id;
@@ -6,19 +7,9 @@ class IdPokemonScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return id.length == 1
-        ? Text(
-            '#00$id',
-            style: Theme.of(context).textTheme.displayLarge,
-          )
-        : id.length == 2
-            ? Text(
-                '#0$id',
-                style: Theme.of(context).textTheme.displayLarge,
-              )
-            : Text(
-                '#$id',
-                style: Theme.of(context).textTheme.displayLarge,
-              );
+    return Text(
+      ToPokemonId().toPokemonId(id),
+      style: Theme.of(context).textTheme.displayLarge,
+    );
   }
 }

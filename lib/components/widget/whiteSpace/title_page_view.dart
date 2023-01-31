@@ -44,16 +44,6 @@ class TitlePageView extends StatelessWidget {
                         ? ThemeColors.myGrey
                         : ThemeColors.greyMedium)),
           ),
-          TextButton(
-            onPressed: () {
-              changePageButton(3);
-            },
-            child: Text('Moves',
-                style: TextStyle(
-                    color: currentPage == 3
-                        ? ThemeColors.myGrey
-                        : ThemeColors.greyMedium)),
-          ),
         ],
       ),
     );

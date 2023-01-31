@@ -34,7 +34,6 @@ class PageViewWhiteSpace extends StatelessWidget {
               sDef: api['stats'][4]['base_stat'],
               speed: api['stats'][5]['base_stat']),
           CallingApiToEvolution(api: api),
-          Text('page4'),
         ],
       ),
     );
