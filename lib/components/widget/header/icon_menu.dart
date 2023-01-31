@@ -17,17 +17,9 @@ class IconMenu extends StatelessWidget {
             right: -size.width * 1.19,
             child: Image.asset(
               'assets/pokeball.png',
-              opacity: const AlwaysStoppedAnimation(.2),
+              opacity: const AlwaysStoppedAnimation(.1),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(80, 30, 0, 0),
-            child: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.menu,
-                )),
-          )
         ],
       ),
     );

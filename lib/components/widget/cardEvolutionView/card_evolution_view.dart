@@ -13,6 +13,7 @@ class CardEvolutionView extends StatelessWidget {
   Widget build(BuildContext context) {
     WithNameProvider controller = WithNameProvider();
     controller.callApiPok(name);
+
     return AnimatedBuilder(
         animation: Listenable.merge([controller.loadingData]),
         builder: ((context, child) => controller.loadingData.value
@@ -21,36 +22,48 @@ class CardEvolutionView extends StatelessWidget {
             : AnimatedBuilder(
                 animation: Listenable.merge([controller.data]),
                 builder: ((context, child) {
-                  return Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    decoration: BoxDecoration(
-                        color: ThemeColors.greyLight,
-                        borderRadius: BorderRadius.circular(10)),
-                    width: MediaQuery.of(context).size.width * 0.8,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
+                  return SizedBox(
+                    width: MediaQuery.of(context).size.width * 8,
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/pokemon',
+                            arguments: controller.data.value);
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        decoration: BoxDecoration(
+                            color: ThemeColors.greyLight,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
+                            Column(
+                              children: [
+                                Text(
+                                  Capitalize().toCapitalize(name),
+                                  style: const TextStyle(
+                                      color: ThemeColors.myGrey),
+                                )
+                              ],
+                            ),
                             Text(
-                              Capitalize().toCapitalize(name),
-                              style: const TextStyle(color: ThemeColors.myGrey),
+                                ToPokemonId().toPokemonId(
+                                    controller.data.value['id'].toString()),
+                                style:
+                                    const TextStyle(color: ThemeColors.myGrey)),
+                            Column(
+                              children: [
+                                SizedBox(
+                                  width: 65,
+                                  child: Image.network(controller
+                                          .data.value['sprites']['other']
+                                      ['official-artwork']['front_default']),
+                                )
+                              ],
                             )
                           ],
                         ),
-                        Text(ToPokemonId().toPokemonId(
-                            controller.data.value['id'].toString())),
-                        Column(
-                          children: [
-                            SizedBox(
-                              width: 65,
-                              child: Image.network(
-                                  controller.data.value['sprites']['other']
-                                      ['official-artwork']['front_default']),
-                            )
-                          ],
-                        )
-                      ],
+                      ),
                     ),
                   );
                 }))));

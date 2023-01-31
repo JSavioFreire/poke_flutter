@@ -5,7 +5,8 @@ import 'package:poke_flutter/components/widget/cardEvolutionView/card_evolution_
 
 class EvolutionView extends StatelessWidget {
   final String urlEvolution;
-  const EvolutionView({super.key, required this.urlEvolution});
+  const EvolutionView(
+      {super.key, required this.urlEvolution});
 
   @override
   Widget build(BuildContext context) {

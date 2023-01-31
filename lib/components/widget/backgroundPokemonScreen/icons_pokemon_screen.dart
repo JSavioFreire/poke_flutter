@@ -11,18 +11,15 @@ class IconsPokemonScreen extends StatelessWidget {
       children: [
         IconButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(
+                context,
+                '/',
+              );
             },
             icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
             )),
-        IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              FontAwesome.heart_empty,
-              color: Colors.white,
-            ))
       ],
     );
   }

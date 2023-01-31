@@ -26,7 +26,7 @@ class Pokemons extends StatelessWidget {
                                 MediaQuery.of(context).size.width /
                                     (MediaQuery.of(context).size.height / 3.5)),
                         itemCount: controller.each.value.length,
-                        itemBuilder: ((_, index) {
+                        itemBuilder: ((context, index) {
                           return InsideCardPokemon(
                               name: controller.each.value[index].name,
                               url: controller.each.value[index].url);

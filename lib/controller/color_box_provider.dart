@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:poke_flutter/theme/theme_colors.dart';
 
-class ColorBoxProvider extends ChangeNotifier {
+class ColorBoxProvider {
   dynamic boxColor(type) {
     if (type == 'grass') {
       return ThemeColors.typeColors['grass'];

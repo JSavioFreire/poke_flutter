@@ -15,7 +15,7 @@ class Search extends StatelessWidget {
         width: 200,
         child: TextFormField(
           decoration: const InputDecoration(
-              hintText: 'Busque pelo Pokemon',
+              hintText: 'Search for one Pokemon',
               border: InputBorder.none,
               contentPadding: EdgeInsets.only(left: 10)),
         ));
